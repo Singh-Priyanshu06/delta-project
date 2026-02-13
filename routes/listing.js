@@ -27,12 +27,7 @@ router.get("/new",isLoggedIn,listingController.renderNewForm)
 router.get("/:id", wrapAsync(listingController.showListing))
 
 //create routes
-// router.post("/", isLoggedIn,validateListing, upload.single('image'),wrapAsync(listingController.createListing));
-router.post("/", upload.single("image"), (req,res)=>{
-    console.log("BODY:", req.body);
-    console.log("FILE:", req.file);
-    res.send("Check logs");
-});
+router.post("/", isLoggedIn,validateListing, upload.single('image'),wrapAsync(listingController.createListing));
 
 
 //edit routes
