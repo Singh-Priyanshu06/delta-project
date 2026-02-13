@@ -126,3 +126,4 @@ app.use((err, req, res, next) => {
 app.listen(3000,()=>{
     console.log("Server are run")
 })
+console.log("SECRET:", process.env.CLOUD_API_SECRET);
