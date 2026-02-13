@@ -89,7 +89,9 @@ app.use((req, res, next) => {
     next();
 });
 
-
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 const listingRouter = require("./routes/listing.js")
 app.use("/listings", listingRouter);
