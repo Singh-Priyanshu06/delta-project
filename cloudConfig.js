@@ -13,6 +13,8 @@ cloudinary.config({
 //     api_key: '574918526694479',
 //     api_secret: 'KHs2aqTW2oBg3pHntoJj4JbjEh0' 
 // });
+require('dotenv').config(); // Temporary test
+console.log(process.env.CLOUD_NAME);
 
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
