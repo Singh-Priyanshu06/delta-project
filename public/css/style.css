@@ -118,9 +118,25 @@ body{
 }
 
 /* map */
-#map{
-    height: 400px;
-    width: 80vh;
-}
 
-/* media */
+  /* Make map responsive */
+  #map {
+    width: 100%;
+    height: 350px; /* default height */
+    max-width: 100%;
+    border-radius: 10px;
+  }
+
+  /* Smaller screens */
+  @media (max-width: 576px) {
+    #map {
+      height: 250px; /* reduce height on mobile */
+    }
+  }
+
+  /* Better spacing */
+  .map-container {
+    padding: 0 10px; /* prevent overflow horizontally */
+  }
+
+
