@@ -37,19 +37,19 @@ main().then(()=>{
 //     touchAfter: 24 * 3600,
 // });
 
-const store = MongoStore.create({
-    mongoUrl: dbUrl,
-    touchAfter: 24 * 3600,
-});
+// const store = MongoStore.create({
+//     mongoUrl: dbUrl,
+//     touchAfter: 24 * 3600,
+// });
 
-store.on("error",(err)=>{
-    console.log("ERROR in MONGO SESSION STORE", err);
-});
+// store.on("error",(err)=>{
+//     console.log("ERROR in MONGO SESSION STORE", err);
+// });
 
 
 
 const sessionOption={
-    store,
+    // store,
     secret : process.env.SECRET,
     resave:false,
     saveUninitialized: false,
