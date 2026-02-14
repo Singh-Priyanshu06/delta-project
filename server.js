@@ -1,10 +1,10 @@
-if(process.env.NODE_ENV != "production"){
- require("dotenv").config();
+const path = require("path"); 
+if (process.env.NODE_ENV !== "production") {
+    require("dotenv").config({ path: path.join(__dirname, ".env") });
 }
 const express = require("express")
 const app = express();
 const mongoose = require("mongoose")
-const path = require("path");
 const methodOverride = require("method-override")
 const ejsMate = require("ejs-mate")
 const session = require("express-session")

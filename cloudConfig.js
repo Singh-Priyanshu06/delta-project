@@ -7,6 +7,12 @@ cloudinary.config({
     api_secret: process.env.CLOUD_API_SECRET
 });
 
+// cloudConfig.js mein temporary test
+cloudinary.config({
+    cloud_name: 'dbwsqdmmr',
+    api_key: '574918526694479',
+    api_secret: 'KHs2aqTW2oBg3pHntoJj4JbjEh0' 
+});
 
 const storage = new CloudinaryStorage({
   cloudinary: cloudinary,
